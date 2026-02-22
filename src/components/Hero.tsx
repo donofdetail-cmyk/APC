@@ -5,8 +5,8 @@ export function Hero() {
     <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
       {/* Background Video/Image Placeholder */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/80 z-10" /> {/* Overlay */}
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black to-transparent z-10" /> {/* Bottom fade */}
+        <div className="absolute inset-0 bg-black/75 z-10" /> {/* Overlay */}
+        <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black via-black/60 to-transparent z-10" /> {/* Bottom fade */}
         <img
           src="/powder-coating-hero.jpg"
           alt="Powder Coating"
