@@ -33,7 +33,7 @@ export function Authority() {
             className="lg:w-1/3 text-center lg:text-left"
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold leading-tight uppercase tracking-tight">
-              Why Nevada's Biggest Industries<br /> <span className="text-gradient-orange">Trust Advanced Powder Coating</span>
+              Why Nevada's Biggest Industries<br /> Trust <span className="text-gradient-orange">Advanced Powder Coating</span>
             </h2>
             <div className="mt-6 w-24 h-1 bg-apc-orange mx-auto lg:mx-0 rounded-full" />
           </motion.div>
