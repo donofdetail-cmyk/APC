@@ -28,7 +28,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="container mx-auto px-4 relative z-20 text-center pt-48 sm:pt-0">
+      <div className="container mx-auto px-4 relative z-20 text-center pt-64 sm:pt-16">
         <motion.div
           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -48,9 +48,9 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-apc-silver text-lg md:text-2xl max-w-3xl mx-auto mb-12 font-light leading-relaxed">
+          <p className="text-white text-lg md:text-2xl max-w-3xl mx-auto mb-12 font-light leading-relaxed drop-shadow-md">
             Northern Nevada’s Premier Powder Coating & Metal Fabrication Hub.
-            From single custom parts to massive industrial runs—<span className="text-white font-medium">if you can envision it,
+            From single custom parts to massive industrial runs—<span className="font-medium">if you can envision it,
               we have the technology to build and coat it.</span>
           </p>
         </motion.div>
