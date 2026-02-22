@@ -37,6 +37,34 @@ h6 {
   text-transform: uppercase;
 }
 
+/* UI/UX Pro Max Accessibility Standards */
+a,
+button,
+[role="button"],
+input,
+select,
+textarea {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Exclude text cursors for inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+  cursor: text;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-apc-black), 0 0 0 4px var(--color-apc-orange);
+  border-radius: 2px;
+}
+
 /* Premium Utility Classes */
 @utility text-gradient-orange {
   background-clip: text;
