@@ -7,37 +7,37 @@ const services = [
     title: "Powder Coating",
     icon: Paintbrush,
     description: "The area's largest oven and the most extensive color selection in Northern Nevada. We handle everything from tiny medical parts to massive architectural structures.",
-    color: "text-purple-400"
+    color: "text-apc-orange"
   },
   {
     title: "Cerakote",
     icon: Shield,
     description: "The industry leader in thin-film ceramic coatings. Unmatched abrasion, corrosion, and chemical resistance for firearms, automotive, and industrial applications.",
-    color: "text-green-400"
+    color: "text-apc-orange"
   },
   {
     title: "Water Jet",
     icon: Scissors,
     description: "Cold, hyper-precision cutting for metals, plastics, and more. No heat-affected zones, just pure accuracy.",
-    color: "text-apc-cyan"
+    color: "text-apc-orange"
   },
   {
     title: "Laser Engraving",
     icon: Zap,
     description: "High-tech permanent marking and branding for custom parts, serial plates, and personalized merchandise.",
-    color: "text-red-400"
+    color: "text-apc-orange"
   },
   {
     title: "Burn Off Oven",
     icon: Flame,
     description: "Safe, efficient removal of old coatings, paint, and grease to restore your metal substrates back to bare perfection.",
-    color: "text-orange-400"
+    color: "text-apc-orange"
   },
   {
     title: "Media Blasting",
     icon: Eraser,
     description: "Flawless surface prep. Featuring a mammoth 36′ x 14′ x 12′ blasting booth to accommodate large-scale industrial and automotive jobs.",
-    color: "text-yellow-400"
+    color: "text-apc-orange"
   }
 ];
 

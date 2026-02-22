@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Star, ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -22,7 +23,7 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold text-white leading-[0.9] tracking-tighter mb-6">
-            BETTER <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">RESOURCES.</span><br />
+            BETTER RESOURCES.<br />
             <span className="text-apc-orange">BETTER SOLUTIONS.</span>
           </h1>
         </motion.div>
@@ -45,8 +46,8 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
         >
-          <a href="#contact" className="w-full sm:w-auto bg-apc-orange hover:bg-orange-600 text-white font-display font-bold text-lg uppercase tracking-wider px-8 py-4 rounded-sm transition-all shadow-[0_0_20px_rgba(255,87,34,0.4)] hover:shadow-[0_0_40px_rgba(255,87,34,0.6)] hover:-translate-y-1 text-center">
-            Get Your Custom Quote Now
+          <a href="#contact" className="w-full sm:w-auto bg-apc-orange hover:bg-orange-600 text-white font-display font-bold text-lg uppercase tracking-wider px-8 py-4 rounded-sm transition-all shadow-[0_0_20px_rgba(255,87,34,0.4)] hover:shadow-[0_0_40px_rgba(255,87,34,0.6)] hover:-translate-y-1 text-center flex items-center justify-center gap-2">
+            Get Your Custom Quote Now <ArrowRight className="w-5 h-5" />
           </a>
           <a href="#services" className="w-full sm:w-auto bg-transparent border border-white/30 hover:border-white text-white font-display font-bold text-lg uppercase tracking-wider px-8 py-4 rounded-sm transition-all hover:bg-white/5 text-center">
             See Our Services
@@ -60,13 +61,13 @@ export function Hero() {
           className="flex flex-wrap justify-center gap-6 md:gap-12 text-sm text-gray-400 font-mono uppercase tracking-widest"
         >
           <div className="flex items-center gap-2">
-            <span className="text-apc-orange">★</span> Serving Reno/Sparks Since 2005
+            <Star className="w-3 h-3 text-apc-orange fill-apc-orange" /> Serving Reno/Sparks Since 2005
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-apc-orange">★</span> 40,000 Sq Ft Facility
+            <Star className="w-3 h-3 text-apc-orange fill-apc-orange" /> 40,000 Sq Ft Facility
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-apc-orange">★</span> PCI Gold Member
+            <Star className="w-3 h-3 text-apc-orange fill-apc-orange" /> PCI Gold Member
           </div>
         </motion.div>
       </div>

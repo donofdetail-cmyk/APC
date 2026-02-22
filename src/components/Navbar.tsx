@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -92,9 +92,9 @@ export function Navbar() {
           </a>
           <a
             href="#contact"
-            className="bg-apc-orange hover:bg-orange-600 text-white font-display font-bold uppercase tracking-wider px-6 py-2 rounded-sm transition-all shadow-[0_0_15px_rgba(255,87,34,0.3)] hover:shadow-[0_0_25px_rgba(255,87,34,0.6)]"
+            className="bg-apc-orange hover:bg-orange-600 text-white font-display font-bold uppercase tracking-wider px-6 py-2 rounded-sm transition-all shadow-[0_0_15px_rgba(255,87,34,0.3)] hover:shadow-[0_0_25px_rgba(255,87,34,0.6)] flex items-center gap-2"
           >
-            Get a Fast Quote ➔
+            Get a Fast Quote <ArrowRight className="w-4 h-4" />
           </a>
         </div>
 

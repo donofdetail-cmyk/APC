@@ -143,7 +143,7 @@ export function Footer() {
                 style={{ border: 0, filter: 'grayscale(100%) invert(90%)' }}
                 allowFullScreen={true}
                 loading="lazy"
-                className="opacity-60 group-hover:opacity-100 transition-opacity duration-500"
+                className="opacity-80 group-hover:opacity-100 transition-opacity duration-500"
               ></iframe>
               <div className="absolute inset-0 pointer-events-none border border-white/10"></div>
             </div>
