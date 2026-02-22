@@ -120,7 +120,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden absolute top-[calc(100%+12px)] left-0 right-0 glass-panel border border-white/10 rounded-2xl p-6 flex flex-col gap-6 shadow-2xl"
+            className="lg:hidden absolute top-[calc(100%+12px)] left-0 right-0 bg-apc-black/95 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col gap-6 shadow-2xl"
           >
             <div className="flex flex-col gap-4">
               {NAV_LINKS.map((item) => (
