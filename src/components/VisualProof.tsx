@@ -19,9 +19,9 @@ export function VisualProof() {
               Media Blasting Restoration
             </h3>
             <div className="aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl">
-              <BeforeAfterSlider 
-                beforeImage="https://images.unsplash.com/photo-1566827953733-3530467394d2?q=80&w=1000&auto=format&fit=crop" // Rusty texture
-                afterImage="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop" // Clean metal
+              <BeforeAfterSlider
+                beforeImage="https://images.unsplash.com/photo-1566827953733-3530467394d2?q=80&w=1000&auto=format&fit=crop&fm=webp"
+                afterImage="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop&fm=webp"
               />
             </div>
             <p className="text-apc-silver">
@@ -34,9 +34,9 @@ export function VisualProof() {
               Custom Powder Coating
             </h3>
             <div className="aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl">
-              <BeforeAfterSlider 
-                beforeImage="https://images.unsplash.com/photo-1622646279933-7d7d24240799?q=80&w=1000&auto=format&fit=crop" // Raw metal part
-                afterImage="https://images.unsplash.com/photo-1622646279955-46549e54d726?q=80&w=1000&auto=format&fit=crop" // Finished part (simulated)
+              <BeforeAfterSlider
+                beforeImage="https://images.unsplash.com/photo-1622646279933-7d7d24240799?q=80&w=1000&auto=format&fit=crop&fm=webp"
+                afterImage="https://images.unsplash.com/photo-1622646279955-46549e54d726?q=80&w=1000&auto=format&fit=crop&fm=webp"
               />
             </div>
             <p className="text-apc-silver">

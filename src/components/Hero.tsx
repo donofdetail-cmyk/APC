@@ -5,10 +5,11 @@ export function Hero() {
     <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
       {/* Background Video/Image Placeholder */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/60 z-10" /> {/* Overlay */}
-        <img 
-          src="https://images.unsplash.com/photo-1565619624098-e659884d897b?q=80&w=2574&auto=format&fit=crop" 
-          alt="Industrial Factory" 
+        <div className="absolute inset-0 bg-black/80 z-10" /> {/* Overlay */}
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black to-transparent z-10" /> {/* Bottom fade */}
+        <img
+          src="/powder-coating-hero.jpg"
+          alt="Powder Coating"
           className="w-full h-full object-cover"
         />
         {/* In a real implementation, this would be a <video> tag */}
@@ -32,8 +33,8 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           <p className="text-apc-silver text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
-            Northern Nevada’s Premier Powder Coating & Metal Fabrication Hub. 
-            From single custom parts to massive industrial runs—if you can envision it, 
+            Northern Nevada’s Premier Powder Coating & Metal Fabrication Hub.
+            From single custom parts to massive industrial runs—if you can envision it,
             we have the technology to build and coat it.
           </p>
         </motion.div>

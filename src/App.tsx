@@ -1,3 +1,4 @@
+import { MotionConfig } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
@@ -9,17 +10,19 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-apc-black text-white selection:bg-apc-orange selection:text-white">
-      <Navbar />
-      <main>
-        <Hero />
-        <Authority />
-        <Services />
-        <VisualProof />
-        <Process />
-        <Testimonials />
-      </main>
-      <Footer />
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen bg-apc-black text-white selection:bg-apc-orange selection:text-white">
+        <Navbar />
+        <main>
+          <Hero />
+          <Authority />
+          <Services />
+          <VisualProof />
+          <Process />
+          <Testimonials />
+        </main>
+        <Footer />
+      </div>
+    </MotionConfig>
   );
 }

@@ -7,19 +7,19 @@ const testimonials = [
     quote: "Advanced Powder Coating gets an A. They handled a massive job for us that no one else in Reno had the oven size to pull off.",
     author: "Mike T.",
     role: "Project Manager, Sierra Construction",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop&fm=webp"
   },
   {
     quote: "The finish on our custom chassis is absolutely flawless. These guys are true artists with a spray gun.",
     author: "Sarah J.",
     role: "Owner, Reno Hot Rods",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop&fm=webp"
   },
   {
     quote: "Fast turnaround and incredible durability. We use APC for all our industrial equipment coatings.",
     author: "David L.",
     role: "Operations Director, Nevada Mining Co.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop&fm=webp"
   }
 ];
 
@@ -51,8 +51,8 @@ export function Testimonials() {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: 100 }}
-                animate={{ 
-                  opacity: activeIndex === index ? 1 : 0, 
+                animate={{
+                  opacity: activeIndex === index ? 1 : 0,
                   x: activeIndex === index ? 0 : -100,
                   pointerEvents: activeIndex === index ? 'auto' : 'none'
                 }}
@@ -62,15 +62,15 @@ export function Testimonials() {
                 <div className="mb-8 text-apc-orange">
                   <Quote className="w-12 h-12 opacity-50" />
                 </div>
-                
+
                 <p className="text-2xl md:text-3xl font-light text-white mb-8 leading-relaxed italic">
                   "{testimonial.quote}"
                 </p>
 
                 <div className="flex items-center gap-4">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.author} 
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.author}
                     className="w-12 h-12 rounded-full border-2 border-apc-orange object-cover"
                   />
                   <div className="text-left">
@@ -98,9 +98,9 @@ export function Testimonials() {
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeIndex === index ? 'bg-apc-orange w-8' : 'bg-white/20 hover:bg-white/40'
-                }`}
+                className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-apc-orange ${activeIndex === index ? 'bg-apc-orange w-8' : 'bg-white/20 hover:bg-white/40'
+                  }`}
+                aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
           </div>

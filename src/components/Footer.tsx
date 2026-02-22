@@ -16,48 +16,70 @@ export function Footer() {
 
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input 
-                  type="text" 
-                  placeholder="Name / Company" 
-                  className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-apc-orange transition-colors"
-                />
-                <input 
-                  type="text" 
-                  placeholder="Email or Phone" 
-                  className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-apc-orange transition-colors"
-                />
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <select defaultValue="" className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-apc-orange transition-colors appearance-none">
-                  <option value="" disabled>Service Needed</option>
-                  <option value="powder">Powder Coating</option>
-                  <option value="cerakote">Cerakote</option>
-                  <option value="waterjet">Water Jet</option>
-                  <option value="engraving">Laser Engraving</option>
-                  <option value="burnoff">Burn Off Oven</option>
-                  <option value="blasting">Media Blasting</option>
-                </select>
-                <select defaultValue="" className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-apc-orange transition-colors appearance-none">
-                  <option value="" disabled>Project Type</option>
-                  <option value="industrial">Industrial / Government</option>
-                  <option value="automotive">Automotive</option>
-                  <option value="architectural">Architectural</option>
-                  <option value="diy">Hobbyist / DIY</option>
-                </select>
+                <label className="flex flex-col gap-1">
+                  <span className="sr-only">Name or Company</span>
+                  <input
+                    type="text"
+                    placeholder="Name / Company"
+                    className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-apc-orange focus:border-apc-orange transition-colors"
+                  />
+                </label>
+                <label className="flex flex-col gap-1">
+                  <span className="sr-only">Email or Phone</span>
+                  <input
+                    type="text"
+                    placeholder="Email or Phone"
+                    className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-apc-orange focus:border-apc-orange transition-colors"
+                  />
+                </label>
               </div>
 
-              <textarea 
-                placeholder="Project Details..." 
-                rows={4}
-                className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-apc-orange transition-colors"
-              ></textarea>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <label className="flex flex-col gap-1">
+                  <span className="sr-only">Service Needed</span>
+                  <select defaultValue="" className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-apc-orange focus:border-apc-orange transition-colors appearance-none cursor-pointer">
+                    <option value="" disabled>Service Needed</option>
+                    <option value="powder">Powder Coating</option>
+                    <option value="cerakote">Cerakote</option>
+                    <option value="waterjet">Water Jet</option>
+                    <option value="engraving">Laser Engraving</option>
+                    <option value="burnoff">Burn Off Oven</option>
+                    <option value="blasting">Media Blasting</option>
+                  </select>
+                </label>
+                <label className="flex flex-col gap-1">
+                  <span className="sr-only">Project Type</span>
+                  <select defaultValue="" className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-apc-orange focus:border-apc-orange transition-colors appearance-none cursor-pointer">
+                    <option value="" disabled>Project Type</option>
+                    <option value="industrial">Industrial / Government</option>
+                    <option value="automotive">Automotive</option>
+                    <option value="architectural">Architectural</option>
+                    <option value="diy">Hobbyist / DIY</option>
+                  </select>
+                </label>
+              </div>
+
+              <label className="flex flex-col gap-1">
+                <span className="sr-only">Project Details</span>
+                <textarea
+                  placeholder="Project Details..."
+                  rows={4}
+                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-apc-orange focus:border-apc-orange transition-colors"
+                ></textarea>
+              </label>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button type="button" className="flex-1 bg-white/5 border border-dashed border-white/20 hover:border-white/50 text-gray-400 hover:text-white py-3 rounded-sm transition-colors text-sm">
+                <button
+                  type="button"
+                  aria-label="Attach CAD files or images"
+                  className="flex-1 bg-white/5 border border-dashed border-white/20 hover:border-white/50 text-gray-400 hover:text-white py-3 rounded-sm transition-colors text-sm cursor-pointer focus:outline-none focus:ring-2 focus:ring-apc-orange"
+                >
                   + Attach Files (CAD, Images)
                 </button>
-                <button type="submit" className="flex-[2] bg-apc-orange hover:bg-orange-600 text-white font-display font-bold uppercase tracking-wider py-3 rounded-sm transition-all shadow-lg">
+                <button
+                  type="submit"
+                  className="flex-[2] bg-apc-orange hover:bg-orange-600 text-white font-display font-bold uppercase tracking-wider py-3 rounded-sm transition-all shadow-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-white"
+                >
                   Get My Free Estimate
                 </button>
               </div>
@@ -114,12 +136,12 @@ export function Footer() {
 
             {/* Map Placeholder */}
             <div className="w-full h-64 bg-white/5 rounded-sm overflow-hidden border border-white/10 relative group">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.456789012345!2d-119.75!3d39.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDMzJzAwLjAiTiAxMTnCsDQ1JzAwLjAiVw!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0, filter: 'grayscale(100%) invert(90%)' }} 
-                allowFullScreen={true} 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.456789012345!2d-119.75!3d39.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDMzJzAwLjAiTiAxMTnCsDQ1JzAwLjAiVw!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: 'grayscale(100%) invert(90%)' }}
+                allowFullScreen={true}
                 loading="lazy"
                 className="opacity-60 group-hover:opacity-100 transition-opacity duration-500"
               ></iframe>

@@ -46,7 +46,7 @@ export function Services() {
     <section id="services" className="py-24 bg-apc-black relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-      
+
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-4">
@@ -65,7 +65,7 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.1 }}
-              className="group relative bg-white/5 border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-colors duration-300 overflow-hidden"
+              className="group relative bg-white/5 border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-colors duration-300 overflow-hidden cursor-pointer"
             >
               {/* Hover Glow Effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
@@ -75,11 +75,11 @@ export function Services() {
               <div className={cn("w-12 h-12 mb-6 rounded-lg bg-black/50 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300", service.color)}>
                 <service.icon className="w-6 h-6" />
               </div>
-              
+
               <h3 className="text-xl font-display font-bold text-white mb-3 uppercase tracking-wide group-hover:text-apc-cyan transition-colors">
                 {service.title}
               </h3>
-              
+
               <p className="text-sm text-gray-400 leading-relaxed">
                 {service.description}
               </p>
