@@ -51,7 +51,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 lg:px-10 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-white flex items-center justify-center rounded-lg shadow-lg rotate-12 transition-transform hover:rotate-0 duration-300">
+          <div className="w-12 h-12 bg-white flex items-center justify-center rounded-lg shadow-lg">
             <span className="text-apc-black font-display font-black text-2xl tracking-tighter">APC</span>
           </div>
           <span className="hidden md:block font-display font-bold text-xl tracking-wider text-gradient-silver">
