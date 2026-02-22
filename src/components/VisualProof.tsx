@@ -1,96 +1,139 @@
-import { BeforeAfterSlider } from './BeforeAfterSlider';
 import { motion } from 'motion/react';
+import { ArrowUpRight } from 'lucide-react';
+
+const GALLERY_ITEMS = [
+  {
+    id: 1,
+    title: "Industrial Chassis Framework",
+    service: "Media Blasting & Powder Coating",
+    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1200&auto=format&fit=crop&fm=webp",
+    span: "lg:col-span-2 lg:row-span-2",
+    height: "min-h-[400px] lg:min-h-[600px]",
+  },
+  {
+    id: 2,
+    title: "Precision Milled Components",
+    service: "High-Temp Ceramic Coating",
+    image: "https://images.unsplash.com/photo-1622646279955-46549e54d726?q=80&w=800&auto=format&fit=crop&fm=webp",
+    span: "lg:col-span-1 lg:row-span-1",
+    height: "min-h-[300px]",
+  },
+  {
+    id: 3,
+    title: "Architectural Facades",
+    service: "UV-Resistant Finish",
+    image: "https://images.unsplash.com/photo-1566827953733-3530467394d2?q=80&w=800&auto=format&fit=crop&fm=webp",
+    span: "lg:col-span-1 lg:row-span-1",
+    height: "min-h-[300px]",
+  },
+  {
+    id: 4,
+    title: "Restored Vintage Auto Parts",
+    service: "Sandblasting & Clear Coat",
+    image: "https://images.unsplash.com/photo-1533514088899-0efbaffb5428?q=80&w=1200&auto=format&fit=crop&fm=webp",
+    span: "lg:col-span-3 lg:row-span-1",
+    height: "min-h-[350px]",
+  }
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30, filter: "blur(5px)" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+  }
+};
 
 export function VisualProof() {
   return (
-    <section className="py-32 bg-apc-black relative overflow-hidden">
+    <section className="py-32 bg-apc-black relative overflow-hidden" id="work">
       {/* Premium Background Grid */}
       <div className="absolute inset-0 z-0 opacity-20" style={{
         backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)',
         backgroundSize: '4rem 4rem'
       }}></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-apc-black blur-[120px] rounded-[100%] pointer-events-none z-0 will-change-transform" /> {/* Radial mask for grid */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-apc-black blur-[120px] rounded-[100%] pointer-events-none z-0 will-change-transform" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20 relative">
+      <div className="container mx-auto px-4 lg:px-10 relative z-10">
+        <div className="text-center mb-16 relative">
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-apc-cyan/10 blur-[80px] rounded-full z-[-1] will-change-transform pointer-events-none"></div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="text-5xl md:text-7xl font-display font-bold text-white mb-6 tracking-tight"
           >
-            SEE THE <span className="text-gradient-silver">DIFFERENCE</span>
+            SIGNATURE <span className="text-gradient-silver">FINISHES</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.1 }}
             className="text-apc-silver max-w-2xl mx-auto text-xl font-light"
           >
-            Drag the slider to see the transformation from raw metal to a flawless finish.
+            A curated gallery of our recent industrial and custom manufacturing projects. Flawless execution on every surface.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
-          >
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-[2px] bg-apc-orange"></div>
-                <h3 className="text-3xl font-display font-bold text-white uppercase tracking-wider">
-                  Media Blasting
-                </h3>
-              </div>
-              <p className="text-apc-silver text-lg font-light leading-relaxed">
-                We strip away years of rust, paint, and grime to reveal the pristine metal underneath, ready for a fresh start.
-              </p>
-            </div>
-            <div className="aspect-video rounded-xl overflow-hidden glass-panel p-2 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-              <div className="w-full h-full rounded-lg overflow-hidden relative">
-                <BeforeAfterSlider
-                  beforeImage="https://images.unsplash.com/photo-1566827953733-3530467394d2?q=80&w=1000&auto=format&fit=crop&fm=webp"
-                  afterImage="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop&fm=webp"
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {GALLERY_ITEMS.map((item) => (
+            <motion.div
+              key={item.id}
+              variants={itemVariants}
+              className={`group relative rounded-2xl overflow-hidden glass-panel border border-white/10 ${item.span} ${item.height}`}
+            >
+              {/* Image with zoom effect on hover */}
+              <div className="absolute inset-0 w-full h-full overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-[1000ms] ease-out group-hover:scale-110 will-change-transform"
                 />
               </div>
-            </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-8"
-          >
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-[2px] bg-apc-cyan"></div>
-                <h3 className="text-3xl font-display font-bold text-white uppercase tracking-wider">
-                  Powder Coating
-                </h3>
+              {/* Glassmorphism gradient overlay overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-apc-black/90 via-apc-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+
+              {/* Content overlay */}
+              <div className="absolute inset-0 p-8 flex flex-col justify-end translate-y-4 group-hover:translate-y-0 transition-transform duration-500 will-change-transform">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-apc-orange font-mono text-sm tracking-widest uppercase mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                      {item.service}
+                    </p>
+                    <h3 className="text-2xl md:text-3xl font-display font-bold text-white drop-shadow-lg">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <div className="w-12 h-12 rounded-full glass-panel flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500 delay-100 border border-white/20">
+                    <ArrowUpRight className="w-6 h-6 text-white" />
+                  </div>
+                </div>
               </div>
-              <p className="text-apc-silver text-lg font-light leading-relaxed">
-                Durable, vibrant, and flawless. Our powder coating process ensures a finish that looks great and lasts a lifetime.
-              </p>
-            </div>
-            <div className="aspect-video rounded-xl overflow-hidden glass-panel p-2 shadow-[0_20px_50px_rgba(0,229,255,0.1)] relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-apc-cyan/10 to-transparent z-0 pointer-events-none rounded-xl"></div>
-              <div className="w-full h-full rounded-lg overflow-hidden relative z-10">
-                <BeforeAfterSlider
-                  beforeImage="https://images.unsplash.com/photo-1622646279933-7d7d24240799?q=80&w=1000&auto=format&fit=crop&fm=webp"
-                  afterImage="https://images.unsplash.com/photo-1622646279955-46549e54d726?q=80&w=1000&auto=format&fit=crop&fm=webp"
-                />
-              </div>
-            </div>
-          </motion.div>
-        </div>
+
+              {/* Subtle hover border glow */}
+              <div className="absolute inset-0 border-2 border-apc-orange/0 group-hover:border-apc-orange/30 rounded-2xl transition-colors duration-500 pointer-events-none"></div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
