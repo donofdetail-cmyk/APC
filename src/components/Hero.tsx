@@ -16,7 +16,7 @@ export function Hero() {
         {/* In a real implementation, this would be a <video> tag */}
       </div>
 
-      <div className="container mx-auto px-4 relative z-20 text-center">
+      <div className="container mx-auto px-4 relative z-20 text-center pt-20 sm:pt-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
