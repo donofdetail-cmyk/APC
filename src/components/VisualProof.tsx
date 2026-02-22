@@ -9,11 +9,11 @@ export function VisualProof() {
         backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)',
         backgroundSize: '4rem 4rem'
       }}></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-apc-black blur-[120px] rounded-[100%] pointer-events-none z-0" /> {/* Radial mask for grid */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-apc-black blur-[120px] rounded-[100%] pointer-events-none z-0 will-change-transform" /> {/* Radial mask for grid */}
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20 relative">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-apc-cyan/10 blur-[80px] rounded-full z-[-1]"></div>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-apc-cyan/10 blur-[80px] rounded-full z-[-1] will-change-transform pointer-events-none"></div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

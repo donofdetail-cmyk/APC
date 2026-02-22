@@ -9,29 +9,30 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/80 z-10" /> {/* Darker Overlay for better text contrast */}
         <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-apc-black via-apc-black/80 to-transparent z-10" /> {/* Bottom fade integrating with next section */}
 
-        {/* Animated Glow Orbs for depth */}
+        {/* Animated Glow Orbs for depth - Optimized for performance */}
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-apc-orange/20 rounded-full blur-[120px] z-10 mix-blend-screen"
+          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-apc-orange/20 rounded-full blur-[120px] z-0 will-change-transform will-change-opacity pointer-events-none"
         />
         <motion.div
           animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-apc-cyan/10 rounded-full blur-[150px] z-10 mix-blend-screen"
+          className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-apc-cyan/10 rounded-full blur-[150px] z-0 will-change-transform will-change-opacity pointer-events-none"
         />
 
         <img
-          src="/powder-coating-hero.jpg"
+          src="/powder-coating-hero.webp"
           alt="Powder Coating"
+          fetchPriority="high"
           className="w-full h-full object-cover scale-105"
         />
       </div>
 
       <div className="container mx-auto px-4 relative z-20 text-center pt-64 sm:pt-16">
         <motion.div
-          initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="relative inline-block"
         >
