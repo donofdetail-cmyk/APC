@@ -30,7 +30,7 @@ const GALLERY_ITEMS = [
     id: 4,
     title: "Restored Vintage Auto Parts",
     service: "Sandblasting & Clear Coat",
-    image: "https://images.unsplash.com/photo-1533514088899-0efbaffb5428?q=80&w=1200&auto=format&fit=crop&fm=webp",
+    image: "/vintage_auto_parts.png",
     span: "lg:col-span-3 lg:row-span-1",
     height: "min-h-[350px]",
   }
