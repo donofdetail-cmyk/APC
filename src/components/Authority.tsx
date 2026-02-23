@@ -28,7 +28,7 @@ export function Authority() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8 }}
             className="lg:w-1/3 text-center lg:text-left"
           >
@@ -42,7 +42,7 @@ export function Authority() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.1 }}
             className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-6 w-full"
           >
             <motion.div variants={itemVariants} className="glass-panel hover:glass-panel-hover p-8 rounded-2xl transition-all duration-300 group">

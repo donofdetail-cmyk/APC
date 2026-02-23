@@ -81,7 +81,7 @@ export function Services() {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className={cn(
                 "group relative glass-panel p-8 rounded-2xl transition-all duration-500 cursor-pointer overflow-hidden",
